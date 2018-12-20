@@ -9,6 +9,10 @@
   Modified 7 Jul 2018
   by MI
   change delay to millis()
+  
+  TODO:
+  1. Refactor the code
+  2. Add in input to the servo and stepper method to determine the time needed to accomplish input motion
 */
 
 #include <Servo.h>
