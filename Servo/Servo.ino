@@ -53,7 +53,7 @@ void setup() {
 void loop() {
   currentMillis = millis();
   rotateStepper(); // TRANSLATION MOTION
-  //  servoSweep(); // FLAPPING MOTION
+  servoSweep(); // FLAPPING MOTION
 }
 
 void rotateStepper() {
@@ -63,20 +63,9 @@ void rotateStepper() {
     myStepper.setSpeed(6000);
   }
   myStepper.runSpeedToPosition();
-  ////  data = 'X';
 
   timeElapsed = millis() - timeInit;
   Serial.println(timeElapsed);
-
-  //  digitalWrite(stepperDirPin, HIGH);
-  //  if (currentMillis - previousStepMillis >= stepperInterval && currentMillis < 1000) {
-  //    previousStepMillis += stepperInterval;
-  //    digitalWrite(stepperPulsePin, HIGH);
-  //    digitalWrite(stepperPulsePin, LOW);
-  //  }
-  //  else if (currentMillis == 5000) {
-  //
-  //  }
 }
 
 void servoSweep() {
